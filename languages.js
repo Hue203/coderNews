@@ -1,4 +1,4 @@
-const languages = ["ar", "zh", "en", "es", "fr", "ru"];
+const languages = ["ar", "zh", "en", "es", "fr", "pt"];
 
 function renderLanguageAnchorTags() {
   const languageHTML = languages.map(

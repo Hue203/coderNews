@@ -6,22 +6,17 @@ console.log(url);
 
 function produceUrl() {
   let url =
-    "https://newsapi.org/v2/top-headlines?apiKey=6eec2f7fe6cd4c40a3fef8f33f5778fe";
-
+    "https://newsapi.org/v2/top-headlines?apiKey=8a6a6ab3d4eb4d97824484158cc5b89a";
   // Look at all url query parameters and add them to the url above to respect language/country/category/page/etc.
   const urlParams = window.location.search.split("?")[1];
-
   // Guard against no url params and default to english.
   if (!urlParams) return url + "&language=en";
-
   urlParams.split("&").map((p) => {
     // "Massage data" into workable form.
     const [key, value] = p.split("=");
     url += `&${key}=${value}`;
   });
-
   console.log({ finalUrl: url });
-
   return url;
 }
 
@@ -50,17 +45,9 @@ function renderSingleArticle(article) {
     <div>
     <img src="${article.urlToImage}" alt="Snow-Img" width="300"/>
    </div>
- 
-  ${article.author}
- 
-
- <a href="${article.url}">${article.source.name}</a>
->
-
-${article.content}
-
- 
-
+   <p>${article.author}</p>
+<div>${article.content}</div>
+<p><a href="${article.url}">${article.source.name}</a></p>
   </div>
    
   `;
