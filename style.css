@@ -1,0 +1,22 @@
+.singleArticle {
+  background: #ffffff;
+  border: 1px solid #dadce0;
+  border-radius: 8px;
+  position: relative;
+  padding: 1rem;
+
+  margin: 15px;
+}
+
+hearder {
+  margin-bottom: 50px;
+}
+img {
+  position: relative;
+}
+#languages {
+  border: 1px solid #dadce0;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 15px;
+}
