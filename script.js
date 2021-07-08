@@ -8,6 +8,7 @@ const urlOptions = {
   category: "",
   page: 1,
   q: "",
+  languages: "",
 };
 
 let currentSideMenu = "top-stories";
@@ -57,17 +58,18 @@ const renderArticles = (newsList) => {
       <a href="${news.url}">View Full Coverage</a>
     </div>
   </div>
-  <img
-    class="ml-3"
-    src="${news.urlToImage}"
-    alt="Image article"
-  />
+  <div><img
+  class="ml-3"
+  src="${news.urlToImage}"
+  alt="Image article"
+/></div>
+  
 </ul>`;
     })
     .join("");
 
   document.getElementById("category-title").innerHTML =
-    urlOptions.category || "Top Headlines";
+    urlOptions.category.toUpperCase() || "Top Headlines";
   document.getElementById("news-list").innerHTML = newsListHTML;
 };
 

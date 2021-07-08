@@ -59,14 +59,17 @@ main {
 }
 
 .media {
+  display: flex;
   border: 1px solid lightgrey;
   border-radius: 10px;
   box-sizing: border-box;
   padding: 2rem;
+  margin: 1rem;
+  box-shadow: 1px #dadce0;
 }
 .media img {
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
   border-radius: 10px;
 }
 .media span.published-at {
@@ -76,4 +79,11 @@ main {
 .media .view-more-ico {
   width: 16px;
   height: 16px;
+}
+.searchbox {
+  margin-left: 200px;
+}
+#search-input {
+  height: 30px;
+  width: 300px;
 }
